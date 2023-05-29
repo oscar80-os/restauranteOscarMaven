@@ -1,0 +1,32 @@
+body.resultado {
+    background-color: #f2f2f2;
+  }
+  
+  ul {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  ul li {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ul li strong {
+    font-weight: bold;
+  }
+  
+  .logo_formulario {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/main/webapp/css/resultado.css">
+    <title>Resultado del formulario</title>
+</head>
+<body class="resultado">
+    <h1>Resultado del formulario</h1>
+    
+    <p>¡Gracias por completar el formulario!</p>
+    
+    <h2>Información enviada:</h2>
+    
+    <ul>
+        <li><strong>Nombre:</strong> <span id="result-first-name"></span></li>
+        <li><strong>Apellido:</strong> <span id="result-last-name"></span></li>
+        <li><strong>Email:</strong> <span id="result-email"></span></li>
+        <li><strong>Tipo de cuenta:</strong> <span id="result-account-type"></span></li>
+        <li><strong>Aceptó los términos y condiciones:</strong> <span id="result-terms-and-conditions"></span></li>
+        <li><strong>Foto de perfil:</strong> <span id="result-profile-picture"></span></li>
+        <li><strong>Edad:</strong> <span id="result-age"></span></li>
+        <li><strong>¿Cómo se enteró de nosotros?:</strong> <span id="result-referrer"></span></li>
+        <li><strong>Opinión:</strong> <span id="result-bio"></span></li>
+    </ul>
+
+    <script>
+        // Obtener los datos enviados desde el formulario
+        var params = new URLSearchParams(window.location.search);
+        var firstName = params.get("first-name");
+        var lastName = params.get("last-name");
+        var email = params.get("email");
+        var accountType = params.get("account-type");
+        var termsAndConditions = params.get("terms-and-conditions") === "on" ? "Sí" : "No";
+        var profilePicture = params.get("profile-picture");
+        var age = params.get("age");
+        var referrer = params.get("referrer");
+        var bio = params.get("bio");
+
+        // Rellena los elementos HTML con los datos obtenidos
+        document.getElementById("result-first-name").textContent = firstName;
+        document.getElementById("result-last-name").textContent = lastName;
+        document.getElementById("result-email").textContent = email;
+        document.getElementById("result-account-type").textContent = accountType;
+        document.getElementById("result-terms-and-conditions").textContent = termsAndConditions;
+        document.getElementById("result-profile-picture").textContent = profilePicture;
+        document.getElementById("result-age").textContent = age;
+        document.getElementById("result-referrer").textContent = referrer;
+        document.getElementById("result-bio").textContent = bio;
+    </script>
+</body>
+</html>
